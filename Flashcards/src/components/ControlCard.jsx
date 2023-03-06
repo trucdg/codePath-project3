@@ -57,29 +57,27 @@ const ControlCard = () => {
   ];
 
   const [cardNum, setCardNum] = useState(cardLibrary[0]);
-  const [isQuestion, setIsQuestion] = useState(true);
-
-  const clickFlipCardHandler = () => {
-    setIsQuestion(!isQuestion);
-  };
 
   const clickNextCardHandler = () => {
     // randomly pick a next card number ranging from [1, cardLibrary.length - 1]
     // since we don't pick the first card (which is the start card)
     let nextCardNum = Math.floor(Math.random() * (cardLibrary.length - 1)) + 1;
-    setIsQuestion(true);
     setCardNum(cardLibrary[nextCardNum]);
+  };
+
+  const flipCardHandler = (e) => {
+    e.currentTarget.classList.toggle("is-flipped");
   };
 
   return (
     <div>
-      <div className="card" onClick={clickFlipCardHandler}>
-        {isQuestion ? (
-          <QuestionCard question={cardNum.question} />
-        ) : (
-          <AnswerCard answer={cardNum.answer} />
-        )}
+      <div className="scene scene--card">
+        <div className="card" onClick={flipCardHandler}>
+          <div className="card__face card__face--front">{cardNum.question}</div>
+          <div className="card__face card__face--back">{cardNum.answer}</div>
+        </div>
       </div>
+
       <button className="nextCard" onClick={clickNextCardHandler}>
         Next Card <i className="fa-solid fa-circle-chevron-right"></i>
       </button>

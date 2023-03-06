@@ -15,19 +15,6 @@ body {
   min-width: 100vw;
 }
 
-.card {
-  background-color: beige;
-  color: black;
-  height: 450px;
-  width: 60vw;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
 .nextCard {
   outline: 0;
   grid-gap: 8px;
@@ -62,8 +49,43 @@ body {
   outline-offset: 1px;
 }
 
-.answer-card {
-  font-size: 0.75em;
+.card {
+  position: relative;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+  /* ------ */
+  background-color: beige;
+  color: black;
+  height: 450px;
+  width: 60vw;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  padding: 3em;
+}
+
+.card.is-flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+  position: absolute;
+  /* width: 100%;
+  height: 100%; */
+  text-align: center;
+  font-weight: bold;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  padding: 3em;
+}
+.card__face--back {
+  transform: rotateY(180deg);
+  padding: 3em;
   color: rgb(94, 91, 91);
-  padding: 2em;
 }
