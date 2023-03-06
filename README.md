@@ -7,7 +7,7 @@
 In this project, I will be creating a web app for learning some fundamental concepts in the SWE industry.
 User will be able to use the study cards in a randomized order.
 
-Time spent: **X** hours spent in total
+Time spent: **8** hours spent in total
 
 ## 🎯 Goals
 By the end of this assignment I will be able to
@@ -30,13 +30,10 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] Cards contains images in addition to or in place of text
-- [ ] Cards have different visual styles such as color based on their category
-  - [ ] *visual style implemented*
+- [x] Cards contains images in addition to or in place of text
+- [x] Cards have different visual styles such as color based on their category
+  - [x] *change background color to red on hard  questions*
 
-The following **additional** features are implemented:
-
-* [ ] List anything else that you added to improve the site's functionality!
 
 ## Video Walkthrough
 
