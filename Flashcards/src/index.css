@@ -95,3 +95,7 @@ body {
 .image-cont img {
   height: 150px;
 }
+
+.hard {
+  background-color: rgb(218, 145, 145);
+}

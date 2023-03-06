@@ -20,6 +20,7 @@ const ControlCard = () => {
       question: "What is 'Coupling' in software engineering?",
       answer:
         "Coupling refers to the degree of interdependence between software modules. High coupling means that modules are closely connected and changes in one module may affect other modules. Low coupling means that modules are independent and changes in one module have little impact on other modules.",
+      hard: "hard",
     },
     {
       question: "What are the various phases of SDLC?",
@@ -30,6 +31,7 @@ const ControlCard = () => {
       question: "What is Object Oriented-Programming (OOP)?",
       answer:
         "OOP is a “style” of programming characterized by the identification of classes of objects closely linked with the methods (functions) and attributes with which they are associated.",
+      hard: "hard",
     },
     {
       question: "What are the 4 basics of OOP?",
@@ -40,17 +42,20 @@ const ControlCard = () => {
       answer:
         "Polymorphism is an OOP concept that refers to the ability of objects to take on multiple form. It is the ability of a programming language to present the same interface for several different underlying data types.",
       img: "https://math.hws.edu/eck/cs124/javanotes7/c5/vehicle-hierarchy.png",
+      hard: "hard",
     },
     {
       question: "What is 'Caching'?",
       answer:
         "Caching is a mechanism in which a subset of data is stored in a computer’s memory so that future requests for that data are served up faster than making costly requests to databases.",
+      hard: "hard",
     },
     {
       question: "What is an Application Programming Interface (API)?",
       answer:
         "An API is a set of definitions and protocols to build a software and enable that software to communicate with different softwares using requests and responses.",
       img: "https://analyticoolblog.com/wp-content/uploads/2020/06/What-is-an-API-call-main-image.jpg",
+      hard: "hard",
     },
     {
       question: "What does CRUD stand for in programming?",
@@ -77,7 +82,7 @@ const ControlCard = () => {
     <div>
       <div className="scene scene--card">
         <div className="card" onClick={flipCardHandler}>
-          <div className="card__face card__face--front">
+          <div className={`card__face card__face--front + ${card.hard}`}>
             <p>{card.question}</p>
             <CardImage img={card.img} />
           </div>
