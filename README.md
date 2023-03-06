@@ -11,22 +11,22 @@ Time spent: **X** hours spent in total
 
 ## 🎯 Goals
 By the end of this assignment I will be able to
-- [ ] Create a new component
-- [ ] Share a small piece of data from one component to the next
-- [ ] Utilize `useState()` to create state variables to help control component behavior
-- [ ] use the `onClick()` event to call a method
-- [ ] create multiple `div` sections to keep track of different chunks of information
-- [ ] use those `div` sections as the basis for CSS styling
+- [x] Create a new component
+- [x] Share a small piece of data from one component to the next
+- [x] Utilize `useState()` to create state variables to help control component behavior
+- [x] use the `onClick()` event to call a method
+- [x] create multiple `div` sections to keep track of different chunks of information
+- [x] use those `div` sections as the basis for CSS styling
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [ ] **A single card at a time is displayed, only showing one of the components of the information pair**
-- [ ] **A list of card pairs is created**
-- [ ] **Clicking on the card shows the corresponding component of the information pair**
-- [ ] **Clicking the next button displays a random new card**
+- [x] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
+- [x] **A single card at a time is displayed, only showing one of the components of the information pair**
+- [x] **A list of card pairs is created**
+- [x] **Clicking on the card shows the corresponding component of the information pair**
+- [x] **Clicking the next button displays a random new card**
 
 The following **optional** features are implemented:
 
