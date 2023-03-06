@@ -53,7 +53,14 @@ GIF created with ...
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+- At first, I didn't know where to start, but then I tried sketching out the components and went from there.
+- The card flipping CSS animation is kinda cool tbh.
+
+## 🧠 Brainstorming:
+- To control the front and back of a flashcard:
+  - Create a state variable to keep track of whether the card is flipped to the front or not.
+  - Use [inline conditional rendering](https://reactjs.org/docs/conditional-rendering.html#inline-if-else-with-conditional-operator) to show either the question or answer on the card based on the state variable
+- To make flashcards have cool animations for flipping to the front and back: [resource](https://www.w3schools.com/howto/howto_css_flip_card.asp)
 
 ## License
 
