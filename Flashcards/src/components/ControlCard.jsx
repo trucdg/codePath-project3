@@ -30,12 +30,17 @@ const ControlCard = () => {
   };
 
   return (
-    <div className="card" onClick={clickFlipCardHandler}>
-      {isQuestion ? (
-        <QuestionCard question={cardNum.question} />
-      ) : (
-        <AnswerCard answer={cardNum.answer} />
-      )}
+    <div>
+      <div className="card" onClick={clickFlipCardHandler}>
+        {isQuestion ? (
+          <QuestionCard question={cardNum.question} />
+        ) : (
+          <AnswerCard answer={cardNum.answer} />
+        )}
+      </div>
+      <button className="nextCard">
+        Next Card <i class="fa-solid fa-circle-chevron-right"></i>
+      </button>
     </div>
   );
 };
