@@ -21,7 +21,7 @@ const ControlCard = () => {
   ];
 
   const [cardNum, setCardNum] = useState(library[0]);
-  return <div>control card</div>;
+  return <div className="card">control card</div>;
 };
 
 export default ControlCard;

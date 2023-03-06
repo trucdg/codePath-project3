@@ -14,3 +14,11 @@ body {
   min-height: 100vh;
   min-width: 100vw;
 }
+
+.card {
+  background-color: beige;
+  color: black;
+  height: 300px;
+  width: 60vw;
+  margin: auto;
+}
