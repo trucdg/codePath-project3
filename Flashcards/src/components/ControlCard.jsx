@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import QuestionCard from "./QuestionCard";
-import AnswerCard from "./AnswerCard";
+import CardImage from "./CardImage";
 
 const ControlCard = () => {
   // in the library array, the first component will be the start-intro card,
@@ -9,11 +8,13 @@ const ControlCard = () => {
     {
       question: "Start!",
       answer: "Press the arrow to start the flashcards :)",
+      img: "https://www.voicesofyouth.org/sites/voy/files/images/2021-09/img_3323.gif",
     },
     {
       question: "What is 'Encapsulation'?",
       answer:
         "Encapsulation is bundling data and methods that work on that data into one unit, like a class in Java. Encapsulation can also refer to a way to restrict the direct access to some components of an object.",
+      img: "https://phoenixnap.com/kb/wp-content/uploads/2021/04/Encapsulation-illustration-with-capsule.png",
     },
     {
       question: "What is 'Coupling' in software engineering?",
@@ -56,13 +57,13 @@ const ControlCard = () => {
     },
   ];
 
-  const [cardNum, setCardNum] = useState(cardLibrary[0]);
+  const [card, setCard] = useState(cardLibrary[0]);
 
   const clickNextCardHandler = () => {
     // randomly pick a next card number ranging from [1, cardLibrary.length - 1]
     // since we don't pick the first card (which is the start card)
     let nextCardNum = Math.floor(Math.random() * (cardLibrary.length - 1)) + 1;
-    setCardNum(cardLibrary[nextCardNum]);
+    setCard(cardLibrary[nextCardNum]);
   };
 
   const flipCardHandler = (e) => {
@@ -73,8 +74,14 @@ const ControlCard = () => {
     <div>
       <div className="scene scene--card">
         <div className="card" onClick={flipCardHandler}>
-          <div className="card__face card__face--front">{cardNum.question}</div>
-          <div className="card__face card__face--back">{cardNum.answer}</div>
+          <div className="card__face card__face--front">
+            <p>{card.question}</p>
+            <CardImage img={card.img} />
+          </div>
+          <div className="card__face card__face--back">
+            <p>{card.answer}</p>
+            <CardImage img={card.img} />
+          </div>
         </div>
       </div>
 

@@ -89,3 +89,9 @@ body {
   padding: 3em;
   color: rgb(94, 91, 91);
 }
+
+/* CSS flipping animation source: https://codepen.io/mondal10/pen/WNNEvjV */
+
+.image-cont img {
+  height: 150px;
+}
