@@ -31,7 +31,11 @@ const ControlCard = () => {
 
   return (
     <div className="card" onClick={clickFlipCardHandler}>
-      {isQuestion ? <QuestionCard /> : <AnswerCard />}
+      {isQuestion ? (
+        <QuestionCard question={cardNum.question} />
+      ) : (
+        <AnswerCard answer={cardNum.answer} />
+      )}
     </div>
   );
 };
