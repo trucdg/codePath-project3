@@ -5,7 +5,7 @@ import AnswerCard from "./AnswerCard";
 const ControlCard = () => {
   // in the library array, the first component will be the start-intro card,
   // the next cards will store question-answer pairs
-  let library = [
+  let cardLibrary = [
     {
       question: "Start!",
       answer: "Press the arrow to start the flashcards :)",
@@ -22,11 +22,19 @@ const ControlCard = () => {
     },
   ];
 
-  const [cardNum, setCardNum] = useState(library[0]);
+  const [cardNum, setCardNum] = useState(cardLibrary[0]);
   const [isQuestion, setIsQuestion] = useState(true);
 
   const clickFlipCardHandler = () => {
     setIsQuestion(!isQuestion);
+  };
+
+  const clickNextCardHandler = () => {
+    // randomly pick a next card number ranging from [1, cardLibrary.length - 1]
+    // since we don't pick the first card (which is the start card)
+    let nextCardNum = Math.floor(Math.random() * (cardLibrary.length - 1)) + 1;
+    setIsQuestion(true);
+    setCardNum(cardLibrary[nextCardNum]);
   };
 
   return (
@@ -38,8 +46,8 @@ const ControlCard = () => {
           <AnswerCard answer={cardNum.answer} />
         )}
       </div>
-      <button className="nextCard">
-        Next Card <i class="fa-solid fa-circle-chevron-right"></i>
+      <button className="nextCard" onClick={clickNextCardHandler}>
+        Next Card <i className="fa-solid fa-circle-chevron-right"></i>
       </button>
     </div>
   );
