@@ -1,10 +1,18 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
+import QuestionCard from "./components/QuestionCard";
 
 function App() {
   const [count, setCount] = useState(0);
+
+  // in the library array, the first component will be the start-intro card,
+  // the next cards will store question-answer pairs
   let library = [
+    {
+      question: "Start!",
+      answer: "Press the arrow to start the flashcards :)",
+    },
     {
       question: "What is 'Encapsulation'?",
       answer:
@@ -24,6 +32,10 @@ function App() {
         <p>SWE is high in demand. Let's learn more about the field!</p>
         <p>Number of cards: 10</p>
       </header>
+
+      <div>
+        <QuestionCard />
+      </div>
     </div>
   );
 }
