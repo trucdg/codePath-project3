@@ -2,6 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
 import QuestionCard from "./components/QuestionCard";
+import ControlCard from "./components/ControlCard";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -34,6 +35,7 @@ function App() {
       </header>
 
       <div>
+        <ControlCard />
         <QuestionCard />
       </div>
     </div>
