@@ -39,6 +39,7 @@ const ControlCard = () => {
       question: "What is 'Polymorphism' in OOP?",
       answer:
         "Polymorphism is an OOP concept that refers to the ability of objects to take on multiple form. It is the ability of a programming language to present the same interface for several different underlying data types.",
+      img: "https://math.hws.edu/eck/cs124/javanotes7/c5/vehicle-hierarchy.png",
     },
     {
       question: "What is 'Caching'?",
@@ -49,11 +50,13 @@ const ControlCard = () => {
       question: "What is an Application Programming Interface (API)?",
       answer:
         "An API is a set of definitions and protocols to build a software and enable that software to communicate with different softwares using requests and responses.",
+      img: "https://analyticoolblog.com/wp-content/uploads/2020/06/What-is-an-API-call-main-image.jpg",
     },
     {
       question: "What does CRUD stand for in programming?",
       answer:
         "CRUD stands for create, read, update and delete. They are the four basic operations of persistent data elements.",
+      img: "https://i0.wp.com/greatproductsconsulting.com/wp-content/uploads/2019/02/CRUD-Operations.png?fit=560%2C315&ssl=1",
     },
   ];
 
