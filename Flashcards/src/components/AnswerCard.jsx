@@ -7,3 +7,5 @@ const AnswerCard = () => {
     </div>
   );
 };
+
+export default AnswerCard;

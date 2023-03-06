@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import QuestionCard from "./QuestionCard";
+import AnswerCard from "./AnswerCard";
 
 const ControlCard = () => {
   // in the library array, the first component will be the start-intro card,
@@ -21,7 +23,18 @@ const ControlCard = () => {
   ];
 
   const [cardNum, setCardNum] = useState(library[0]);
-  return <div className="card">control card</div>;
+  const [isQuestion, setIsQuestion] = useState(true);
+
+  const clickFlipCardHandler = () => {
+    setIsQuestion(!isQuestion);
+  };
+
+  return (
+    <div className="card">
+      {isQuestion ? <QuestionCard /> : <AnswerCard />}
+      <button onClick={clickFlipCardHandler}> flip card</button>
+    </div>
+  );
 };
 
 export default ControlCard;

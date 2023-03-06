@@ -1,7 +1,6 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import "./App.css";
-import QuestionCard from "./components/QuestionCard";
 import ControlCard from "./components/ControlCard";
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
 
       <div>
         <ControlCard />
-        <QuestionCard />
       </div>
     </div>
   );
