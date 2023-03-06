@@ -18,7 +18,7 @@ body {
 .card {
   background-color: beige;
   color: black;
-  height: 300px;
+  height: 450px;
   width: 60vw;
   margin: auto;
   display: flex;
@@ -49,7 +49,7 @@ body {
   text-overflow: ellipsis;
   transition: all 0.14s ease-out;
   white-space: nowrap;
-  margin: 2em;
+  margin: 5em 2em;
 }
 
 .nextCard:hover {
@@ -65,4 +65,5 @@ body {
 .answer-card {
   font-size: 0.75em;
   color: rgb(94, 91, 91);
+  padding: 2em;
 }
