@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CardImage from "./CardImage";
+import AnswerForm from "./AnswerForm";
 
 const ControlCard = () => {
   // in the library array, the first component will be the start-intro card,
@@ -88,6 +89,9 @@ const ControlCard = () => {
             <CardImage img={card.img} />
           </div>
         </div>
+      </div>
+      <div className="answer-area">
+        <AnswerForm />
       </div>
 
       <button className="nextCard" onClick={clickNextCardHandler}>

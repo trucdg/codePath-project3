@@ -15,7 +15,8 @@ body {
   min-width: 100vw;
 }
 
-.nextCard {
+.nextCard,
+button {
   outline: 0;
   grid-gap: 8px;
   align-items: center;
@@ -36,10 +37,10 @@ body {
   text-overflow: ellipsis;
   transition: all 0.14s ease-out;
   white-space: nowrap;
-  margin: 5em 2em;
+  margin: 2em;
 }
 
-.nextCard:hover {
+button:hover {
   box-shadow: 4px 4px 0 #f1f678;
   transform: translate(-4px, -4px);
   background-color: rgb(196, 196, 191);
@@ -105,4 +106,10 @@ body {
 
 .hard {
   background-color: rgb(218, 145, 145);
+}
+
+.answer-area {
+  margin: 2em;
+  font-size: large;
+  letter-spacing: 5px;
 }
