@@ -83,6 +83,12 @@ body {
 
 .card__face--front {
   padding: 3em;
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 .card__face--back {
   transform: rotateY(180deg);
@@ -94,6 +100,7 @@ body {
 
 .image-cont img {
   height: 150px;
+  display: block;
 }
 
 .hard {
