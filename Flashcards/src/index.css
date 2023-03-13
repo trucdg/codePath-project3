@@ -95,13 +95,18 @@ button:hover {
   transform: rotateY(180deg);
   padding: 3em;
   color: rgb(94, 91, 91);
+  height: inherit;
+  width: inherit;
+  border-radius: inherit;
+  display: grid;
+  justify-content: center;
+  align-items: center;
 }
 
 /* CSS flipping animation source: https://codepen.io/mondal10/pen/WNNEvjV */
 
 .image-cont img {
   height: 150px;
-  display: block;
 }
 
 .hard {
