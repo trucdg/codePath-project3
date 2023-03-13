@@ -91,7 +91,7 @@ const ControlCard = () => {
         </div>
       </div>
       <div className="answer-area">
-        <AnswerForm />
+        <AnswerForm cardAnswer={card.answer} />
       </div>
 
       <button className="nextCard" onClick={clickNextCardHandler}>
