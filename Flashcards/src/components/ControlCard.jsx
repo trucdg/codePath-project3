@@ -65,11 +65,19 @@ const ControlCard = () => {
 
   const [card, setCard] = useState(cardLibrary[0]);
 
+  // state variables to keep track of the state of the correctness of the entered answer
+  const [correctAnswer, setCorrectAnswer] = useState("not-submitted");
+
+  const enteredAnswerHandler = (answerStatus) => {
+    setCorrectAnswer(answerStatus);
+  };
+
   const clickNextCardHandler = () => {
     // randomly pick a next card number ranging from [1, cardLibrary.length - 1]
     // since we don't pick the first card (which is the start card)
     let nextCardNum = Math.floor(Math.random() * (cardLibrary.length - 1)) + 1;
     setCard(cardLibrary[nextCardNum]);
+    setCorrectAnswer("not-submitted");
   };
 
   const flipCardHandler = (e) => {
@@ -91,7 +99,11 @@ const ControlCard = () => {
         </div>
       </div>
       <div className="answer-area">
-        <AnswerForm cardAnswer={card.answer} />
+        <AnswerForm
+          cardAnswer={card.answer}
+          onAnswer={enteredAnswerHandler}
+          correctAnswer={correctAnswer}
+        />
       </div>
 
       <button className="nextCard" onClick={clickNextCardHandler}>

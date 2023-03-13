@@ -2,16 +2,14 @@ import React, { useState } from "react";
 
 const AnswerForm = (props) => {
   const [answer, setAnswer] = useState("");
-  const [correctAnswer, setCorrectAnswer] = useState("");
 
   const submitHandler = (event) => {
     event.preventDefault();
-    console.log("form submitted!");
 
     if (answer == props.cardAnswer) {
-      setCorrectAnswer("correct");
+      props.onAnswer("correct");
     } else {
-      setCorrectAnswer("wrong");
+      props.onAnswer("wrong");
     }
   };
 
@@ -27,7 +25,7 @@ const AnswerForm = (props) => {
           placeholder="Your Answer"
           onChange={answerHandler}
           value={answer}
-          id={correctAnswer}
+          id={props.correctAnswer}
         />
       </label>
       <button type="submit">Submit Guess</button>
