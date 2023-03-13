@@ -11,57 +11,54 @@ const ControlCard = () => {
       img: "https://www.voicesofyouth.org/sites/voy/files/images/2021-09/img_3323.gif",
     },
     {
-      question: "What is 'Encapsulation'?",
-      answer:
-        "Encapsulation is bundling data and methods that work on that data into one unit, like a class in Java. Encapsulation can also refer to a way to restrict the direct access to some components of an object.",
-      img: "https://phoenixnap.com/kb/wp-content/uploads/2021/04/Encapsulation-illustration-with-capsule.png",
+      question: "The sum of the angles of a triangle is always ___?",
+      answer: "180",
+      img: "https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/angle-sum-theorem-1627632246.png",
     },
     {
-      question: "What is 'Coupling' in software engineering?",
-      answer:
-        "Coupling refers to the degree of interdependence between software modules. High coupling means that modules are closely connected and changes in one module may affect other modules. Low coupling means that modules are independent and changes in one module have little impact on other modules.",
+      question:
+        "A compound statement formed by joining two or more statements with the word 'and' is a ___?",
+      answer: "conjunction",
       hard: "hard",
     },
     {
-      question: "What are the various phases of SDLC?",
-      answer:
-        "- Requirement Analysis, Design, Develop, Testing and Maintenance ",
+      question: "___ lines are lines that intersect to form right angles.",
+      answer: "perpendicular",
     },
     {
-      question: "What is Object Oriented-Programming (OOP)?",
-      answer:
-        "OOP is a “style” of programming characterized by the identification of classes of objects closely linked with the methods (functions) and attributes with which they are associated.",
+      question:
+        "A compound statement formed by joining two or more statements with the word 'or' is a ___?",
+      answer: "disjunction",
       hard: "hard",
     },
     {
-      question: "What are the 4 basics of OOP?",
-      answer: "Abstraction, Encapsulation, Inheritance, Polymorphism",
+      question: "A straight angle is equal to ___ degree?",
+      answer: "180",
+      img: "https://user-images.githubusercontent.com/17547686/31929586-4efbd912-b8a5-11e7-8f43-5d73cca6e2eb.png",
     },
     {
-      question: "What is 'Polymorphism' in OOP?",
-      answer:
-        "Polymorphism is an OOP concept that refers to the ability of objects to take on multiple form. It is the ability of a programming language to present the same interface for several different underlying data types.",
-      img: "https://math.hws.edu/eck/cs124/javanotes7/c5/vehicle-hierarchy.png",
+      question:
+        "What numbers are whole number, greater than 1, have only 2 factors; itself and 1; that is, a number that can be devided evenly by 1 and itself.",
+      answer: "Prime",
+      img: "https://t4.ftcdn.net/jpg/04/72/66/93/360_F_472669320_gjjT2zekm8cGVzqgClLUJc16pFiSL3Cn.jpg",
       hard: "hard",
     },
     {
-      question: "What is 'Caching'?",
-      answer:
-        "Caching is a mechanism in which a subset of data is stored in a computer’s memory so that future requests for that data are served up faster than making costly requests to databases.",
+      question: "A quadrilateral with two pairs of parallel sides?",
+      answer: "parallelogram",
+      hard: "hard",
+      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_GuttFp3x9wLeCDRueSIlc-0SzRdpQH081w&usqp=CAU",
+    },
+    {
+      question: "What is a quadrilateral with only ONE PAIR of parallel sides?",
+      answer: "Trapezoid",
+      img: "https://cdn.shopify.com/s/files/1/2009/8293/products/TP200.jpg?v=1575932472",
       hard: "hard",
     },
     {
-      question: "What is an Application Programming Interface (API)?",
-      answer:
-        "An API is a set of definitions and protocols to build a software and enable that software to communicate with different softwares using requests and responses.",
-      img: "https://analyticoolblog.com/wp-content/uploads/2020/06/What-is-an-API-call-main-image.jpg",
-      hard: "hard",
-    },
-    {
-      question: "What does CRUD stand for in programming?",
-      answer:
-        "CRUD stands for create, read, update and delete. They are the four basic operations of persistent data elements.",
-      img: "https://i0.wp.com/greatproductsconsulting.com/wp-content/uploads/2019/02/CRUD-Operations.png?fit=560%2C315&ssl=1",
+      question: "What is the bottom number in a fraction?",
+      answer: "denominator",
+      img: "https://o.quizlet.com/KV2rvSWsm4NTLjC2Fdde3Q.png",
     },
   ];
 
