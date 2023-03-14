@@ -10,11 +10,13 @@ const ControlCard = () => {
       question: "Start!",
       answer: "Press the arrow to start the flashcards :)",
       img: "https://www.voicesofyouth.org/sites/voy/files/images/2021-09/img_3323.gif",
+      hard: "",
     },
     {
       question: "The sum of the angles of a triangle is always ___?",
       answer: "180",
       img: "https://d138zd1ktt9iqe.cloudfront.net/media/seo_landing_files/angle-sum-theorem-1627632246.png",
+      hard: "",
     },
     {
       question:
@@ -25,6 +27,7 @@ const ControlCard = () => {
     {
       question: "___ lines are lines that intersect to form right angles.",
       answer: "perpendicular",
+      hard: "",
     },
     {
       question:
@@ -36,6 +39,7 @@ const ControlCard = () => {
       question: "A straight angle is equal to ___ degree?",
       answer: "180",
       img: "https://user-images.githubusercontent.com/17547686/31929586-4efbd912-b8a5-11e7-8f43-5d73cca6e2eb.png",
+      hard: "",
     },
     {
       question:
@@ -60,6 +64,7 @@ const ControlCard = () => {
       question: "What is the bottom number in a fraction?",
       answer: "denominator",
       img: "https://o.quizlet.com/KV2rvSWsm4NTLjC2Fdde3Q.png",
+      hard: "",
     },
   ];
 
@@ -90,7 +95,8 @@ const ControlCard = () => {
     // pick a next card number ranging from [1, cardLibrary.length - 1]
     // since we don't pick the first card (which is the start card)
     // let nextCardNum = Math.floor(Math.random() * (cardLibrary.length - 1)) + 1;
-    let nextCardNum = (currentCardNum - 1) % cardLibrary.length;
+    let nextCardNum =
+      (currentCardNum - 1 + cardLibrary.length) % cardLibrary.length;
     console.log(nextCardNum);
     setCurrentCardNum(nextCardNum);
     setCard(cardLibrary[nextCardNum]);
@@ -134,10 +140,10 @@ const ControlCard = () => {
         />
       </div>
 
-      <button className="nextCard" onClick={clickNextCardHandler}>
+      <button className="nextCard" onClick={clickBackCardHandler}>
         Back Card <i className="fa-solid fa-circle-chevron-left"></i>
       </button>
-      <button className="nextCard" onClick={clickBackCardHandler}>
+      <button className="nextCard" onClick={clickNextCardHandler}>
         Next Card <i className="fa-solid fa-circle-chevron-right"></i>
       </button>
       <button className="nextCard" onClick={clickShuffleHandler}>
