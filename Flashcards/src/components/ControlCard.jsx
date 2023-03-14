@@ -75,6 +75,16 @@ const ControlCard = () => {
 
   const enteredAnswerHandler = (answerStatus) => {
     setCorrectAnswer(answerStatus);
+    if (answerStatus == "correct") {
+      setStreakCount((prevState) => {
+        return prevState + 1;
+      });
+    } else if (answerStatus == "wrong") {
+      if (streakCount > longestStreak) {
+        setLongestStreak(streakCount);
+      }
+      setStreakCount(0);
+    }
   };
 
   // state variables to keep track of the number of the current card
@@ -118,8 +128,16 @@ const ControlCard = () => {
     e.currentTarget.classList.toggle("is-flipped");
   };
 
+  // set state variables to count streak
+  const [streakCount, setStreakCount] = useState(0);
+  // set state variables to store the longest Streak
+  const [longestStreak, setLongestStreak] = useState(0);
+
   return (
     <div>
+      <h3>
+        Count streak: {streakCount} ; Longest Streak: {longestStreak}
+      </h3>
       <div className="scene scene--card">
         <div className="card" onClick={flipCardHandler}>
           <div className={`card__face card__face--front + ${card.hard}`}>
@@ -137,6 +155,7 @@ const ControlCard = () => {
           cardAnswer={card.answer}
           onAnswer={enteredAnswerHandler}
           correctAnswer={correctAnswer}
+          streakCount={streakCount}
         />
       </div>
 
