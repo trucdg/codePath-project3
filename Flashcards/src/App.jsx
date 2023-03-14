@@ -7,8 +7,11 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>SWE Flashcards</h1>
-        <p>SWE is high in demand. Let's learn more about the field!</p>
+        <h1>Mathematics Review Flashcards</h1>
+        <p>
+          Math is fundamental to all sciences. Let's review some basic
+          mathematical concepts!
+        </p>
         <p>Number of cards: 10</p>
       </header>
 
