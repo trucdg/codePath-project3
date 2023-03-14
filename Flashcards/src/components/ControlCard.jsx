@@ -72,12 +72,40 @@ const ControlCard = () => {
     setCorrectAnswer(answerStatus);
   };
 
+  // state variables to keep track of the number of the current card
+  const [currentCardNum, setCurrentCardNum] = useState(0);
+
   const clickNextCardHandler = () => {
-    // randomly pick a next card number ranging from [1, cardLibrary.length - 1]
+    // pick a next card number ranging from [1, cardLibrary.length - 1]
     // since we don't pick the first card (which is the start card)
-    let nextCardNum = Math.floor(Math.random() * (cardLibrary.length - 1)) + 1;
+    // let nextCardNum = Math.floor(Math.random() * (cardLibrary.length - 1)) + 1;
+    let nextCardNum = (currentCardNum + 1) % cardLibrary.length;
+    console.log(nextCardNum);
+    setCurrentCardNum(nextCardNum);
     setCard(cardLibrary[nextCardNum]);
     setCorrectAnswer("not-submitted");
+  };
+
+  const clickBackCardHandler = () => {
+    // pick a next card number ranging from [1, cardLibrary.length - 1]
+    // since we don't pick the first card (which is the start card)
+    // let nextCardNum = Math.floor(Math.random() * (cardLibrary.length - 1)) + 1;
+    let nextCardNum = (currentCardNum - 1) % cardLibrary.length;
+    console.log(nextCardNum);
+    setCurrentCardNum(nextCardNum);
+    setCard(cardLibrary[nextCardNum]);
+    setCorrectAnswer("not-submitted");
+  };
+
+  const clickShuffleHandler = () => {
+    // this is the implementation of the Durstenfeld shuffle
+    // we don't shuffle the first card
+    for (var i = cardLibrary.length - 1; i > 1; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = cardLibrary[i];
+      cardLibrary[i] = cardLibrary[j];
+      cardLibrary[j] = temp;
+    }
   };
 
   const flipCardHandler = (e) => {
@@ -107,7 +135,13 @@ const ControlCard = () => {
       </div>
 
       <button className="nextCard" onClick={clickNextCardHandler}>
+        Back Card <i className="fa-solid fa-circle-chevron-left"></i>
+      </button>
+      <button className="nextCard" onClick={clickBackCardHandler}>
         Next Card <i className="fa-solid fa-circle-chevron-right"></i>
+      </button>
+      <button className="nextCard" onClick={clickShuffleHandler}>
+        Shuffle Card <i className="fa-solid fa-shuffle"></i>
       </button>
     </div>
   );
