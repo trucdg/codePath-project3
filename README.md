@@ -8,7 +8,7 @@ In this project, I will be creating a web app for learning some fundamental conc
 User will be able to use the study cards in a randomized order. 
 I also build features that allow users to enter an answer (with exact or fuzzy matching) and move backwards and forwards through the list of cards.
 
-Time spent: **__** hours spent in total
+Time spent: **4** hours spent in total
 
 ## 🎯 Goals
 By the end of this assignment I will be able to
